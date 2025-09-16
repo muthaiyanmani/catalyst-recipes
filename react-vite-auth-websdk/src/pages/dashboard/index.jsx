@@ -1,14 +1,20 @@
+import { useState } from "react";
 import { useUser } from "../../context/user";
 
 export default function DashboardPage() {
   const { getUserDetails } = useUser();
   const userDetails = getUserDetails();
+  const [isLoading, setIsLoading] = useState(false);
  
   const logoutUser = async () => {
+    setIsLoading(true);
+    
     try {
       await window.catalyst.auth.signOut("/");
     } catch (err) {
       console.log(err);
+    } finally{
+      setIsLoading(false);
     }
   };
 
@@ -47,7 +53,8 @@ export default function DashboardPage() {
               <div className="mt-10 flex items-center justify-center gap-x-6">
                 <button
                   onClick={logoutUser}
-                  className="rounded-md bg-red-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600"
+                  disabled={isLoading}
+                  className="rounded-md bg-red-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600 disabled:*:cursor-not-allowed disabled:opacity-50"
                 >
                   Sign Out
                 </button>
