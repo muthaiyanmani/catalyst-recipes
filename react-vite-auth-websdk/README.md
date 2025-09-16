@@ -2,6 +2,8 @@
 
 A modern React application template built with Vite that demonstrates Catalyst embedded authentication integration. This template provides a complete authentication flow with protected routes and user management.
 
+🌐 **[Live Preview](https://react-auth.onslate.com/)**
+
 ## 🚀 Features
 
 - **Modern React**: Built with React 18 and Vite for fast development
@@ -33,7 +35,7 @@ Before running this project, ensure you have:
 ### 1. Clone the repository
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/muthaiyanmani/catalyst-recipes.git
 cd react-vite-auth-websdk
 ```
 
@@ -41,8 +43,6 @@ cd react-vite-auth-websdk
 
 ```bash
 npm install
-# or
-yarn install
 ```
 
 ### 3. Configure Catalyst

@@ -24,5 +24,8 @@ dist-ssr
 *.sw?
 *.code-workspace
 
-.catalystrc
-catalyst.json
+# Catalyst files
+**/.catalystrc
+**/catalyst.json
+**/.catalyst
+    
