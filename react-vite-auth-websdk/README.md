@@ -93,7 +93,7 @@ src/
 The Catalyst WebSDK is included in `index.html`:
 
 ```html
-<script src="https://static.zohocdn.com/catalyst/sdk/js/4.5.0/catalystWebSDK.js"></script>
+<script src="https://static.zohocdn.com/catalyst/sdk/js/4.6.0/catalystWebSDK.js"></script>
 <script src="/__catalyst/sdk/init.js"></script>
 ```
 
